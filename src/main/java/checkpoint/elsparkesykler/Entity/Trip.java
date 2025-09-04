@@ -9,12 +9,12 @@ public class Trip {
 
     @ManyToOne
     @MapsId("userId")
-    //@JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
     @MapsId("scooterId")
-    //@JoinColumn(name = "id")
+    @JoinColumn(name = "scooter_id")
     private Scooter scooter;
 
     public TripId getId() {
