@@ -27,7 +27,9 @@ public class TripService {
     }
 
     //Hente alle turer for en bestemt bruker, sortert etter starttidspunkt.
-
+    public List<Trip> findTripsByUserIdOrderByStartTime(Long userId) {
+        return tripRepository.findTripsByUserIdOrderByStartTime(userId);
+    }
             //Regne ut gjennomsnittlig pris per km for alle turer.
             //Finne hvilken bruker som har kjørt flest turer.
 

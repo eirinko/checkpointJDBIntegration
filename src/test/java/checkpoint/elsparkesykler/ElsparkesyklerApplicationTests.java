@@ -56,7 +56,13 @@ class ElsparkesyklerApplicationTests {
     @Test
     void testAvailableScootersWithCapacityGreaterThan20Is1() {
         List<Scooter> scooters = tripService.findAvailableScootersWithBatteryCapacityGreaterThan20();
-        
+
         assertEquals(1,scooters.size());
+    }
+
+    @Test
+    void testFindAllTripsForUserIdSorted() {
+        List<Trip> trips = tripService.findTripsByUserIdOrderByStartTime(1L);
+        //assertEquals(1,trips.size());
     }
 }
