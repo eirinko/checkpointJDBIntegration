@@ -1,4 +1,4 @@
-package checkpoint.elsparkesykler;
+package checkpoint.scooter;
 
 public interface ScooterRepository {
 }
