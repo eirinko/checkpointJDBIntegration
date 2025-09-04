@@ -1,5 +1,6 @@
-package checkpoint.scooter;
+package checkpoint.elsparkesykler.Repository;
 
+import checkpoint.elsparkesykler.Entity.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TripRepository extends JpaRepository<Trip,Integer> {
