@@ -5,19 +5,39 @@ import jakarta.persistence.*;
 @Entity
 public class Trip {
     @EmbeddedId
-    private TripId id;
-
-
-/*    @EmbeddedId
-    EksamenId eksamenId;
+    private TripId id = new TripId();
 
     @ManyToOne
-    @MapsId("studentId")
-    @JoinColumn(name = "snr")
-    private Student student;
+    @MapsId("userId")
+    //@JoinColumn(name = "id")
+    private User user;
 
     @ManyToOne
-    @MapsId("fagId")
-    @JoinColumn(name = "fnr")
-    Fag fag;*/
+    @MapsId("scooterId")
+    //@JoinColumn(name = "id")
+    private Scooter scooter;
+
+    public TripId getId() {
+        return id;
+    }
+
+    public void setId(TripId id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Scooter getScooter() {
+        return scooter;
+    }
+
+    public void setScooter(Scooter scooter) {
+        this.scooter = scooter;
+    }
 }

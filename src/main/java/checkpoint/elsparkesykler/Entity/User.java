@@ -1,9 +1,8 @@
 package checkpoint.elsparkesykler.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class User {
@@ -12,6 +11,9 @@ public class User {
     private Long id;
     private String name;
     private String phonenumber;
+
+    @OneToMany(mappedBy = "user")
+    List<Trip> trips;
 
     public User() {
     }

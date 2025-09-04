@@ -18,6 +18,22 @@ public class TripId implements Serializable {
     public TripId() {
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getScooterId() {
+        return scooterId;
+    }
+
+    public void setScooterId(Long scooterId) {
+        this.scooterId = scooterId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

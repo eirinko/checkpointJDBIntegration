@@ -1,9 +1,7 @@
 package checkpoint.elsparkesykler.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Scooter {
@@ -14,6 +12,9 @@ public class Scooter {
     private String brand;
     private double batteryCapacity;
     private String status; //TODO make this enum??
+
+    @OneToMany(mappedBy = "scooter")
+    List<Trip> trips;
 
     public Scooter() {
     }
